@@ -19,6 +19,7 @@
 <b>Actions</b>: São ações que serão enviadas do seu component para acionar os Reducers. Ele serve apenas para informar qual função deverá rodar e qual é o dado que ela vai usar como parâmetro!
 
 
-<b>Reducers<b>: Que faz todo o trabalho e aplica a lógica, qual é a função do Reducer?
+<b>Reducers</b>: Que faz todo o trabalho e aplica a lógica, qual é a função do Reducer?
+
 
 <b>States</b>: É o responsável para armazenar os estados criados, modificados e atualizados
