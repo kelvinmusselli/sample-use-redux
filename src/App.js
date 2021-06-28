@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+
+import { Provider } from 'react-redux'; //Como em contextAPI tem o Provider que prove o envio dos
+// contextos para todas as paginas
+// o redux nao trabalha diferente mas a diferença que ele utiliza apenas um arquivo para prover tudo
+
+import store from './store';
+// o store precisa estar como propriedade no provider
+
+import { Switch, BrowserRouter, Route }  from 'react-router-dom';
+
+import Home from './pages/Home';
+import Welcome from './pages/Welcome';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          <Route  path="/" exact component={Home} />
+          <Route  path="/welcome" component={Welcome} />
+        </Switch>
+      </BrowserRouter>
+    </Provider>
   );
 }
 
