@@ -15,7 +15,7 @@ const users = (state = INITIAL_STATE, action) => {
 
   switch(action.type){
     case GET_USER: {
-      return { ...state, user: action.payload }
+      return { ...state }
     }
     case SET_USER: {
       return { user: action.payload }
